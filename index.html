@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      .outcontainer {
+        margin-top: 6em;
+        width: 40%;
+        margin-left: 30%;
+        box-shadow: 2px 2px 9px grey;
+      }
+
+      header {
+        height: 50px;
+        background: rgb(9, 218, 255);
+      }
+      .fa-window-close {
+        float: right;
+        line-height: 50px;
+        font-size: 20px;
+        padding-right: 10px;
+        color: white;
+      }
+
+      #room {
+        float: left;
+        line-height: 50px;
+        padding-left: 10px;
+        color: white;
+      }
+
+      .messages {
+        padding: 5% 4%;
+        flex: auto;
+        height: 60vh;
+      }
+      .message-right {
+        margin-top: 0.3em;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .message-left {
+        margin-top: 0.3em;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .boxmess {
+        background: rgb(231, 231, 231);
+        border-radius: 20px;
+        padding: 5px 20px;
+        color: rgb(0, 0, 0);
+        display: inline-block;
+        max-width: 80%;
+      }
+
+      .textmess {
+        width: 100%;
+        letter-spacing: 0;
+        float: left;
+        font-size: 1.1em;
+        word-wrap: break-word;
+      }
+
+      .boxmess-current {
+        background: rgb(0, 174, 255);
+        border-radius: 20px;
+        padding: 5px 20px;
+        color: rgb(255, 255, 255);
+        display: inline-block;
+        max-width: 80%;
+      }
+
+      .usersend {
+        padding-top: 8px;
+        font-size: 12px;
+        color: #141414;
+        margin: 0 4px;
+      }
+      .custom-control-inline {
+        width: 100%;
+        margin-bottom: 0px !important;
+      }
+
+      /* form */
+      .input {
+        width: 100%;
+      }
+      .btn {
+        width: 20%;
+      }
+      @media (max-width: 1024px) {
+        .outcontainer {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outcontainer">
+      <header class="justify-content-center">
+        <h4 id="room">Name Room</h4>
+        <i class="fa fa-window-close" aria-hidden="true"></i>
+      </header>
+
+      <div class="messages">
+        <div class="message-left">
+          <div class="boxmess">
+            <div class="textmess">Xin chào</div>
+          </div>
+          <div class="usersend">hoangman</div>
+        </div>
+
+        <div class="message-right">
+          <div class="usersend">hoangman</div>
+          <div class="boxmess-current">
+            <div class="textmess">Chào clmm</div>
+          </div>
+        </div>
+      </div>
+
+      <form class="form">
+        <div class="form-group custom-control-inline">
+          <input type="text" class="input" aria-describedby="helpId" />
+          <button class="btn btn-primary" role="button">send</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

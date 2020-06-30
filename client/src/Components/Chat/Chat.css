@@ -1,0 +1,92 @@
+.outcontainer {
+  margin-top: 6em;
+  width: 40%;
+  margin-left: 30%;
+  box-shadow: 2px 2px 9px grey;
+}
+
+header {
+  height: 50px;
+  background: rgb(9, 218, 255);
+}
+.fa-window-close {
+  float: right;
+  line-height: 50px;
+  font-size: 20px;
+  padding-right: 10px;
+  color: white;
+}
+
+#room {
+  float: left;
+  line-height: 50px;
+  padding-left: 10px;
+  color: white;
+}
+
+.messages {
+  padding: 5% 4%;
+  flex: auto;
+  height: 60vh;
+}
+.message-right {
+  margin-top: 0.3em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message-left {
+  margin-top: 0.3em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.boxmess {
+  background: rgb(231, 231, 231);
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  max-width: 80%;
+}
+
+.textmess {
+  width: 100%;
+  letter-spacing: 0;
+  float: left;
+  font-size: 1.1em;
+  word-wrap: break-word;
+}
+
+.boxmess-current {
+  background: rgb(0, 174, 255);
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  max-width: 80%;
+}
+
+.usersend {
+  padding-top: 8px;
+  font-size: 12px;
+  color: #141414;
+  margin: 0 4px;
+}
+.custom-control-inline {
+  width: 100%;
+  margin-bottom: 0px !important;
+}
+
+/* form */
+.input {
+  width: 100%;
+}
+.btn {
+  width: 20%;
+}
+@media (max-width: 1024px) {
+  .outcontainer {
+    width: 90%;
+  }
+}
