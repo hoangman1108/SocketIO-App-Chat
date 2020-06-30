@@ -21,7 +21,13 @@ io.on('connection', (socket) => {
         socket.broadcast.to(room).emit('message', { user: 'admin', text: `${user.name}, has Joined!` });
         socket.join(user.room);
     });
-
+    
+    socket.on('sendMessage',(message, callback) => {
+        const user = getUser(socket.id);
+        io.to(user.room).emit('message',{user: user.name, text: message});
+        io.to(user.room).emit('roomData',{user: user.room, users: getUserInRoom(user.room)});
+        callback();
+    })
 
 
     //disconnect when close brower

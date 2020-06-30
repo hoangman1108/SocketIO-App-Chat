@@ -55,8 +55,8 @@ const Chat = ({ location }) => { //any link
     return (
     <div className="outcontainer">
         <Header room={room}></Header>
-        <Messages></Messages>
-        <Form></Form>
+        <Messages messages = {messages} name = {name}></Messages>
+        <Form sendMessage = {sendMessage} message = {message} setMessage={setMessage}></Form>
     </div>  
     )
 }

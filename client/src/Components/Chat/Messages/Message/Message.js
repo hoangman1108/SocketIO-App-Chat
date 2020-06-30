@@ -1,24 +1,30 @@
 import React, { Component } from 'react'
 
-export default class Message extends Component {
+const Message = ({ message: { text, user }, name }) => {
+    let isCurrentUser = false;
 
-    render() {
-        return (
-            <div>
-                <div class="message-left">
-                    <div class="boxmess">
-                        <div class="textmess">Xin chào</div>
-                    </div>
-                    <div class="usersend">hoangman</div>
-                </div>
-
-                <div class="message-right">
-                    <div class="usersend">hoangman</div>
-                    <div class="boxmess-current">
-                        <div class="textmess">Chào clmm</div>
-                    </div>
-                </div>
-            </div>
-        )
+    if (name) {
+        const trimmedName = name.trim().toLowerCase();
+        if (user === trimmedName) {
+            isCurrentUser = true;
+        }
     }
+    return (
+        isCurrentUser
+            ?
+            (<div className="message-right">
+                <div className="usersend">{user}</div>
+                <div className="boxmess-current">
+                    <div className="textmess">{text}</div>
+                </div>
+            </div>)
+            :
+            (<div className="message-left">
+                <div className="boxmess">
+                    <div className="textmess">{text}</div>
+                </div>
+                <div className="usersend">{user}</div>
+            </div>)
+    )
 }
+export default Message;
