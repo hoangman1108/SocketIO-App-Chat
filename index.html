@@ -20,10 +20,12 @@
     />
 
     <style>
-      .outcontainer {
+      .row {
         margin-top: 6em;
-        width: 40%;
-        margin-left: 30%;
+      }
+      .outcontainer {
+        /* width: 40%;
+        margin-left: 30%; */
         box-shadow: 2px 2px 9px grey;
       }
 
@@ -107,6 +109,41 @@
       .btn {
         width: 20%;
       }
+
+      /* online */
+      .online {
+        border-left: 1px solid rgb(158, 158, 158);
+        height: 70vh;
+      }
+      .online ul {
+        list-style: none;
+        padding-left: 1em;
+      }
+      .online li {
+        margin-top: 2px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+      }
+
+      li img {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 50%;
+        margin-right: 7px;
+      }
+
+      li{
+        font-size: 20px;
+      }
+      .end-img{
+        float: right;
+        width: 0.5em;
+        height: auto;
+        margin-top: 0.6em;
+        margin-right: 1em;
+      }
+
       @media (max-width: 1024px) {
         .outcontainer {
           width: 90%;
@@ -115,34 +152,63 @@
     </style>
   </head>
   <body>
-    <div class="outcontainer">
-      <header class="justify-content-center">
-        <h4 id="room">Name Room</h4>
-        <i class="fa fa-window-close" aria-hidden="true"></i>
-      </header>
+    <div class="row">
+      <div class="col-4 offset-4">
+        <div class="outcontainer">
+          <header class="justify-content-center">
+            <h4 id="room">Name Room</h4>
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+          </header>
 
-      <div class="messages">
-        <div class="message-left">
-          <div class="boxmess">
-            <div class="textmess">Xin chào</div>
-          </div>
-          <div class="usersend">hoangman</div>
-        </div>
+          <div class="messages">
+            <div class="message-left">
+              <div class="boxmess">
+                <div class="textmess">Xin chào</div>
+              </div>
+              <div class="usersend">hoangman</div>
+            </div>
 
-        <div class="message-right">
-          <div class="usersend">hoangman</div>
-          <div class="boxmess-current">
-            <div class="textmess">Chào clmm</div>
+            <div class="message-right">
+              <div class="usersend">hoangman</div>
+              <div class="boxmess-current">
+                <div class="textmess">Chào clmm</div>
+              </div>
+            </div>
           </div>
+
+          <form class="form">
+            <div class="form-group custom-control-inline">
+              <input type="text" class="input" aria-describedby="helpId" />
+              <button class="btn btn-primary" role="button">send</button>
+            </div>
+          </form>
         </div>
       </div>
 
-      <form class="form">
-        <div class="form-group custom-control-inline">
-          <input type="text" class="input" aria-describedby="helpId" />
-          <button class="btn btn-primary" role="button">send</button>
+      <div class="col-3 offset-1">
+        <div class="online">
+          <ul>
+            <li>
+              <img src="https://cdn.24h.com.vn/upload/1-2020/images/2020-03-16/1584324288-470-anh-12-1584088794-width650height867.jpg"/>
+              man  
+              <img class="end-img" src="https://www.pngfind.com/pngs/m/269-2698936_green-dot-icon-png-green-online-icon-png.png"/>
+            </li>
+
+            <li>
+              <img src="https://cdn.24h.com.vn/upload/1-2020/images/2020-03-16/1584324288-470-anh-12-1584088794-width650height867.jpg"/>
+              man  
+              <img class="end-img" src="https://www.pngfind.com/pngs/m/269-2698936_green-dot-icon-png-green-online-icon-png.png"/>
+            </li>
+            <li>
+              <img src="https://cdn.24h.com.vn/upload/1-2020/images/2020-03-16/1584324288-470-anh-12-1584088794-width650height867.jpg"/>
+              man  
+              <img class="end-img" src="https://www.pngfind.com/pngs/m/269-2698936_green-dot-icon-png-green-online-icon-png.png"/>
+            </li>
+            
+           
+          </ul>
         </div>
-      </form>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->

@@ -10,6 +10,7 @@ const server = http.createServer(app);
 
 
 const { addUser, removeUser, getUser, getUserInRoom } = require('./User');
+const { all } = require('./router');
 
 const io = socketio(server);
 io.on('connection', (socket) => {
@@ -19,13 +20,17 @@ io.on('connection', (socket) => {
         if (error) return callback({ error });
         socket.emit('message', { user: 'admin', text: `${user.name}, wellcome to the room ${user.room}` });
         socket.broadcast.to(room).emit('message', { user: 'admin', text: `${user.name}, has Joined!` });
+        var allusers = getUserInRoom(room);
+        socket.emit('allusers',allusers);
+        io.to(room).emit('allusers',allusers);
         socket.join(user.room);
     });
-    
-    socket.on('sendMessage',(message, callback) => {
+
+
+    socket.on('sendMessage', (message, callback) => {
         const user = getUser(socket.id);
-        io.to(user.room).emit('message',{user: user.name, text: message});
-        io.to(user.room).emit('roomData',{user: user.room, users: getUserInRoom(user.room)});
+        io.to(user.room).emit('message', { user: user.name, text: message });
+        io.to(user.room).emit('roomData', { user: user.room, users: getUserInRoom(user.room) });
         callback();
     })
 
